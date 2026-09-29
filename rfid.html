@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="RFID Student ID prototype case study — ESP32, RFID and fingerprint verification exploration by Himon Patel.">
+  <title>RFID Student ID Prototype — Himon Patel</title>
+  <link rel="icon" href="assets/favicon.svg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="project-page rfid-page rfid-v18">
+  <div class="page-noise"></div>
+  <header class="project-header">
+    <a class="brand" href="index.html"><span class="brand-mark">RF</span><span>RFID Student ID</span></a>
+    <nav><a href="#prototype">Prototype</a><a href="#demo">Demo</a><a href="#contribution">Contribution</a><a href="#limits">Limits</a><a href="index.html#projects">Projects</a></nav>
+  </header>
+
+  <main>
+    <section class="rfid-real-hero">
+      <div class="rfid-real-hero-media">
+        <img src="assets/rfid-setup-2.jpeg" alt="ESP32 board, RFID reader, fingerprint sensor and wiring used in the student ID prototype">
+        <div class="rfid-real-hero-shade"></div>
+      </div>
+      <div class="rfid-real-hero-copy reveal">
+        <div class="eyebrow">IOT · SIXTH-SEMESTER GROUP PROJECT</div>
+        <h1>RFID Student ID Prototype</h1>
+        <p class="lede">A small ESP32-based prototype exploring RFID identification, fingerprint verification and the practical boundary between a working hardware demo and a complete connected product.</p>
+        <span class="project-status">WORKING HARDWARE PROTOTYPE · EXTERNAL DATABASE NOT INTEGRATED</span>
+        <div class="rfid-hero-facts">
+          <span>ESP32</span><span>MFRC522 RFID</span><span>Fingerprint sensor</span><span>Arduino IDE</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="case-wrap rfid-case-wrap">
+      <div class="case-grid">
+        <aside class="case-nav">
+          <strong>DEVICE LOG</strong>
+          <a href="#prototype">01 Prototype</a>
+          <a href="#demo">02 Demo evidence</a>
+          <a href="#contribution">03 Contribution</a>
+          <a href="#limits">04 Limitation</a>
+          <a href="#learning">05 Learning</a>
+        </aside>
+
+        <div class="case-content">
+          <section id="prototype">
+            <div class="eyebrow">01 · PROTOTYPE</div>
+            <h2>A real hardware build, not a rendered concept.</h2>
+            <p>The setup combines an ESP32 board, an MFRC522 RFID reader and a fingerprint sensor. The photographs below are from the actual prototype and show the wiring, reader, biometric module and serial-monitor output used during testing.</p>
+            <div class="rfid-photo-grid">
+              <figure class="rfid-photo-card rfid-photo-wide"><img src="assets/rfid-setup-1.jpeg" alt="RFID and ESP32 prototype wired on a laptop"><figcaption>Physical prototype — ESP32, RFID reader, fingerprint module and LEDs.</figcaption></figure>
+              <figure class="rfid-photo-card"><img src="assets/rfid-setup-2.jpeg" alt="Close view of ESP32, RFID reader and fingerprint sensor"><figcaption>Closer hardware view.</figcaption></figure>
+              <figure class="rfid-photo-card"><img src="assets/rfid-serial-1.jpeg" alt="Arduino IDE serial monitor showing RFID and biometric verification output"><figcaption>Serial-monitor verification output.</figcaption></figure>
+              <figure class="rfid-photo-card"><img src="assets/rfid-serial-2.jpeg" alt="Arduino IDE and prototype during RFID and fingerprint testing"><figcaption>Testing the card + biometric flow.</figcaption></figure>
+            </div>
+          </section>
+
+          <section id="demo">
+            <div class="eyebrow">02 · DEMO EVIDENCE</div>
+            <h2>The raw clips show the prototype actually responding.</h2>
+            <p>Rather than replacing the build with polished mockups, these short clips preserve the real test setup: card scans, fingerprint interaction, LEDs and serial-monitor feedback.</p>
+            <div class="rfid-demo-feature">
+              <video id="rfid-main-video" controls playsinline preload="metadata" poster="assets/rfid-serial-2.jpeg">
+                <source src="assets/rfid-demo-2.mp4" type="video/mp4">
+              </video>
+              <div class="rfid-demo-picker" aria-label="RFID demo clips">
+                <button class="active" type="button" data-video="assets/rfid-demo-2.mp4"><strong>01</strong><span>Full interaction</span></button>
+                <button type="button" data-video="assets/rfid-demo-3.mp4"><strong>02</strong><span>Card + biometric</span></button>
+                <button type="button" data-video="assets/rfid-demo-4.mp4"><strong>03</strong><span>Verification flow</span></button>
+                <button type="button" data-video="assets/rfid-demo-5.mp4"><strong>04</strong><span>Serial feedback</span></button>
+                <button type="button" data-video="assets/rfid-demo-1.mp4"><strong>05</strong><span>Short hardware clip</span></button>
+              </div>
+            </div>
+          </section>
+
+          <section id="contribution">
+            <div class="eyebrow">03 · CONTRIBUTION</div>
+            <h2>A small group assignment that became a hands-on implementation exercise.</h2>
+            <p>I handled the practical implementation and used AI as step-by-step assistance while working through hardware connections and microcontroller code. I do not present that as embedded-systems expertise; the value for me was building enough of the system to understand how the components interact.</p>
+          </section>
+
+          <section id="limits">
+            <div class="eyebrow">04 · LIMITATION</div>
+            <h2>The hardware flow worked. The complete connected system did not.</h2>
+            <p>The serial-monitor test demonstrates local card identification and biometric verification logic, but I did not complete an external database integration. This is therefore a working embedded/IoT prototype — not a production attendance platform or finished student-ID system.</p>
+            <div class="info-grid">
+              <article class="info-card"><h3>What was demonstrated</h3><p>RFID read, local identity matching, fingerprint verification, indicator response and serial output.</p></article>
+              <article class="info-card"><h3>What remains outside the prototype</h3><p>External database persistence, production authentication, deployment, administration and reliability testing.</p></article>
+            </div>
+          </section>
+
+          <section id="learning">
+            <div class="eyebrow">05 · LEARNING</div>
+            <h2>The useful lesson was the boundary between device behaviour and system behaviour.</h2>
+            <p>The prototype gave me practical exposure to RFID interfacing, ESP32 setup, a biometric sensor, serial debugging and basic hardware/software integration. More importantly, it made the missing layers obvious: data architecture, security, persistence and operational use.</p>
+          </section>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="page-footer"><span>© <span data-year></span> Himon Patel · RFID Student ID</span><a href="index.html#projects">Back to projects</a></footer>
+  <script src="script.js"></script>
+</body>
+</html>
