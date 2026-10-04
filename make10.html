@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Make 10 — Himon Patel's CS50P final project: a terminal arithmetic game built in Python with validation, hint generation and pytest tests.">
+  <title>Make 10 — Himon Patel</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="project-page make10-page">
+  <div class="page-noise" aria-hidden="true"></div>
+  <header class="project-header">
+    <a class="brand" href="index.html"><span class="brand-mark">HP</span><span>Himon Patel</span></a>
+    <nav><a href="index.html#projects">Projects</a><a href="about.html">About</a><a href="assets/Himon_Patel_Resume_Final.pdf" target="_blank" rel="noopener">Resume</a><a href="index.html#contact">Contact</a></nav>
+    <div class="header-socials project-socials" data-social-mount aria-label="Social links"></div>
+  </header>
+
+  <main>
+    <section class="make10-hero shell reveal">
+      <div class="make10-hero-copy">
+        <p class="eyebrow">PYTHON · CS50P FINAL PROJECT</p>
+        <h1>Make 10</h1>
+        <p class="project-lead">A terminal-based arithmetic game where four random digits must be used in the exact order provided, with basic arithmetic operations and at most one pair of parentheses, to produce exactly 10.</p>
+        <div class="make10-actions">
+          <a class="button button-primary" href="https://youtu.be/vppqqNDNDrQ" target="_blank" rel="noopener">Watch video demo ↗</a>
+          <a class="button button-ghost" href="#" data-config-link="make10Github" target="_blank" rel="noopener" hidden>View GitHub ↗</a>
+        </div>
+        <p class="make10-origin-note"><strong>Repository context:</strong> the public GitHub repository is a portfolio copy of the final project originally submitted through CS50’s course submission system.</p>
+      </div>
+      <div class="make10-console" aria-label="Illustrative terminal view">
+        <div class="make10-console-bar"><i></i><i></i><i></i><span>project.py</span></div>
+        <pre><code>Welcome to Make 10
+
+Numbers: 8 2 1 5
+
+Use all four digits in order.
+Operators: +  -  *  /
+Parentheses: at most one pair
+
+&gt; hint
+Searching valid expressions...
+
+&gt; your expression:</code></pre>
+      </div>
+    </section>
+
+    <section class="project-section shell reveal">
+      <div class="project-section-label">01 · GAME LOOP</div>
+      <div class="project-section-body">
+        <h2>Small rules, enough logic to make the implementation interesting.</h2>
+        <p>The game generates four random single-digit numbers from 0–9. A player enters an arithmetic expression using all four digits in the same order. The expression may use <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code> and at most one pair of parentheses, and it must evaluate to exactly 10.</p>
+        <div class="make10-rule-grid">
+          <article><span>01</span><strong>Generate</strong><p>Produce four random digits for the round.</p></article>
+          <article><span>02</span><strong>Validate</strong><p>Check digit order and the allowed expression format.</p></article>
+          <article><span>03</span><strong>Evaluate</strong><p>Evaluate the accepted arithmetic expression and compare it with 10.</p></article>
+          <article><span>04</span><strong>Assist</strong><p>Allow <code>hint</code> to search for a valid solution and <code>quit</code> to exit.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-section shell reveal">
+      <div class="project-section-label">02 · IMPLEMENTATION</div>
+      <div class="project-section-body">
+        <h2>Functions are separated around the game’s responsibilities.</h2>
+        <p>The submitted project README describes the implementation as a set of top-level functions in <code>project.py</code>, matching the CS50P final-project structure.</p>
+        <div class="make10-function-list">
+          <div><code>generate_numbers()</code><span>Creates the four random digits.</span></div>
+          <div><code>evaluate_expression(expr)</code><span>Evaluates an accepted arithmetic expression and handles failures such as division by zero.</span></div>
+          <div><code>is_valid_expression(expr, numbers)</code><span>Checks that the required digits appear in the correct order and restricts parentheses.</span></div>
+          <div><code>find_solution(numbers)</code><span>Tries combinations of operations and parentheses to find an expression that reaches 10.</span></div>
+          <div><code>play_game()</code><span>Controls input, output, hints, validation and the repeated game loop.</span></div>
+        </div>
+        <p class="make10-method-note">The project uses Python’s <code>eval()</code> for arithmetic evaluation after restricting the accepted expression format. The solver uses brute-force search because the search space is small enough for this game.</p>
+      </div>
+    </section>
+
+    <section class="project-section shell reveal">
+      <div class="project-section-label">03 · TESTING</div>
+      <div class="project-section-body">
+        <h2>Unit tests cover the parts most likely to break the rules.</h2>
+        <p><code>test_project.py</code> contains pytest coverage for number generation, expression evaluation and expression validation. The project has no external Python dependencies, so its <code>requirements.txt</code> is empty.</p>
+        <div class="make10-test-strip">
+          <span>pytest</span>
+          <span>random number constraints</span>
+          <span>evaluation / division errors</span>
+          <span>digit-order validation</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-section shell reveal">
+      <div class="project-section-label">04 · WHY IT IS HERE</div>
+      <div class="project-section-body">
+        <h2>A small project, shown for specific evidence.</h2>
+        <p>I do not present Make 10 as a large software system. It belongs in this portfolio because it provides a compact example of Python fundamentals, function decomposition, input validation, basic algorithmic search, error handling and automated testing.</p>
+        <div class="make10-evidence-tags"><span>Python</span><span>CLI</span><span>Validation</span><span>Search</span><span>pytest</span></div>
+        <div class="make10-actions bottom-actions">
+          <a class="button button-primary" href="https://youtu.be/vppqqNDNDrQ" target="_blank" rel="noopener">Watch demo ↗</a>
+          <a class="button button-ghost" href="#" data-config-link="make10Github" target="_blank" rel="noopener" hidden>Open repository ↗</a>
+          <a class="button button-ghost" href="index.html#projects">Back to portfolio</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="page-footer"><span>© <span data-year></span> Himon Patel</span><a href="index.html#projects">Back to projects</a></footer>
+  <script src="script.js"></script>
+</body>
+</html>

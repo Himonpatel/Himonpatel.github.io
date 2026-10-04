@@ -1,16 +1,15 @@
 const CONFIG={
-  linkedin:"https://www.linkedin.com/in/himon-patel-49b174358/", // paste your full LinkedIn profile URL here
-  github:"",   // leave blank until you want GitHub public
-  email:"himon.atlas@gmail.com"     // paste the email recruiters should use here
+  linkedin:"https://linkedin.com/in/himon-patel-49b174358", // public LinkedIn profile
+  github:"https://github.com/Himonpatel",   // paste your GitHub profile URL here
+  email:"himon.atlas@gmail.com",    // recruiter contact email
+  smartcampusGithub:"https://github.com/Himonpatel/SmartCampus", // paste the public SmartCampus repository URL here
+  make10Github:"https://github.com/Himonpatel/make10" // paste the public Make 10 repository URL here
 };
 
 const projects=[
-  {id:"smartcampus",index:"01",type:"SYSTEM / BUILD",status:"PROTOTYPE",meta:"Engineering Project-II · Team project",title:"SmartCampus",short:"A multi-role campus operations prototype that grew from an indoor-navigation problem.",accent:"#7dd3fc",rgb:"125,211,252",visual:"campus",href:"smartcampus.html"},
+  {id:"smartcampus",index:"01",type:"SYSTEM / BUILD",status:"WORKING PROTOTYPE",meta:"Engineering Project-II · Team project",title:"SmartCampus",short:"A multi-role campus operations prototype connecting backend workflows, schedules, room changes, analytics and indoor-navigation logic.",accent:"#7dd3fc",rgb:"125,211,252",visual:"campus",href:"smartcampus.html"},
   {id:"atlas",index:"02",type:"PRODUCT / SYSTEM",status:"RESEARCH + ARCHITECTURE",meta:"Independent product initiative",title:"Project Atlas",short:"A long-term exploration of learning, progression, student identity and institutional participation.",accent:"#aa92ff",rgb:"170,146,255",visual:"atlas",href:"atlas.html"},
-  {id:"grab-research",index:"03",type:"RESEARCH / PRODUCT",status:"7-PART SERIES",meta:"Independent company & product research",title:"Grab Research",short:"A structured investigation into Grab's evolution, business model, products, GrabMaps and recurring user complaints.",accent:"#5be39d",rgb:"91,227,157",visual:"grab",href:"grab-research.html"},
-  {id:"game-jam",index:"04",type:"INITIATIVE / INTERACTION",status:"DISCUSSIONS ONGOING",meta:"Gamified Learning / Game Jam initiative",title:"Game Jam",short:"An initiative exploring deeper game-system learning rather than treating gamification as points, badges and streaks alone.",accent:"#ffbc4b",rgb:"255,188,75",visual:"jam",href:"gamejam.html"},
-  {id:"parallel-dimension",index:"05",type:"CREATIVE / GAME WORLD",status:"EXPLORATION",meta:"Game narrative concept · Creative exploration",title:"The Parallel Dimension",short:"A sci-fi, thriller and mystery game-world concept built around dimensional rules, discovery and uncertainty.",accent:"#9b8cff",rgb:"155,140,255",visual:"parallel",href:"parallel-dimension.html"},
-  {id:"rfid",index:"06",type:"HARDWARE / PROTOTYPE",status:"PROTOTYPE",meta:"Embedded systems exploration",title:"RFID Student ID",short:"A small RFID student-identification prototype exploring physical access, scanning and identity workflows.",accent:"#72fff4",rgb:"114,255,244",visual:"rfid",href:"rfid.html"}
+  {id:"grab-research",index:"03",type:"RESEARCH / PRODUCT",status:"7-PART SERIES",meta:"Independent company & product research",title:"Understanding Grab",short:"A structured investigation into Grab's evolution, business model, products, GrabMaps and recurring user complaints.",accent:"#5be39d",rgb:"91,227,157",visual:"grab",href:"grab-research.html"}
 ];
 
 const list=document.getElementById("project-list");
@@ -71,6 +70,17 @@ managePortalVideoPlayback();
 document.getElementById("year")?.replaceChildren(String(new Date().getFullYear()));
 document.querySelectorAll("[data-year]").forEach(el=>el.textContent=new Date().getFullYear());
 
+document.querySelectorAll("[data-config-link]").forEach(el=>{
+  const key=el.dataset.configLink;
+  const href=CONFIG[key];
+  if(href){
+    el.href=href;
+    el.hidden=false;
+  }else{
+    el.hidden=true;
+  }
+});
+
 const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add("visible");observer.unobserve(entry.target)}}),{threshold:.12});
 document.querySelectorAll(".reveal").forEach(el=>observer.observe(el));
 
@@ -120,7 +130,7 @@ function renderContactLinks(){
     const a=document.createElement("a");
     a.href=href;
     a.className="contact-link-button social-contact-card";
-    a.innerHTML=`<span class="social-logo">${SOCIAL_ICONS[label]||""}</span><span class="social-copy"><small>${label==='Email'?'EMAIL ME':'CONNECT'}</small><strong>${label==='Email'?CONFIG.email:'LinkedIn'}</strong></span><b>↗</b>`;
+    a.innerHTML=`<span class="social-logo">${SOCIAL_ICONS[label]||""}</span><span class="social-copy"><small>${label==='Email'?'EMAIL ME':'CONNECT'}</small><strong>${label==='Email'?CONFIG.email:label}</strong></span><b>↗</b>`;
     if(external){a.target="_blank";a.rel="noopener"}
     contact.appendChild(a);
   });

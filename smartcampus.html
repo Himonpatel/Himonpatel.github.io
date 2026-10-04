@@ -1,1 +1,99 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>SmartCampus — Himon Patel</title><link rel="icon" href="assets/favicon.svg"><link rel="stylesheet" href="styles.css"></head><body class="project-page smartcampus-page"><div class="page-noise"></div><header class="project-header"><a class="brand" href="index.html"><span class="brand-mark">SC</span><span>SmartCampus</span></a><nav><a href="#problem">Problem</a><a href="#system">System</a><a href="#testing">Testing</a><a href="index.html#projects">Portfolio</a></nav><div class="header-socials project-socials" data-social-mount aria-label="Social links"></div></header><main><section class="project-hero"><div class="campus-hero-map" aria-hidden="true"><svg viewBox="0 0 1500 800" preserveAspectRatio="xMidYMid slice"><g opacity=".55"> <path class="gridline" d="M0 120H1500M0 240H1500M0 360H1500M0 480H1500M0 600H1500M0 720H1500M180 0V800M360 0V800M540 0V800M720 0V800M900 0V800M1080 0V800M1260 0V800M1440 0V800"/></g><rect x="760" y="95" width="210" height="130" rx="18"/><rect x="1030" y="100" width="290" height="125" rx="18"/><rect x="820" y="320" width="270" height="145" rx="18"/><rect x="1160" y="325" width="240" height="140" rx="18"/><rect x="720" y="565" width="250" height="120" rx="18"/><rect x="1060" y="560" width="300" height="120" rx="18"/><path class="hero-route-base" d="M790 160H920V390H1240V620H1160"/><path class="hero-route-ray" d="M790 160H920V390H1240V620H1160"/><circle class="node" cx="790" cy="160" r="8"/><circle class="node" cx="920" cy="390" r="8"/><circle class="node" cx="1240" cy="390" r="8"/><circle class="node" cx="1240" cy="620" r="8"/></svg></div><div class="project-hero-inner reveal"><div class="eyebrow">ENGINEERING PROJECT-II · TEAM PROJECT</div><h1>SmartCampus</h1><p class="lede">A campus operations and indoor-navigation prototype connecting student schedules, faculty room changes, HOD analytics and administrative workflows.</p><span class="project-status">WORKING PROTOTYPE · HARDENING / TESTING</span></div></section><div class="case-wrap"><div class="case-grid"><aside class="case-nav"><strong>SYSTEM MAP</strong><a href="#problem">01 Problem</a><a href="#system">02 System</a><a href="#role">03 My role</a><a href="#testing">04 Testing</a><a href="#limits">05 Limits</a></aside><div class="case-content"><section id="problem"><div class="eyebrow">01 · PROBLEM</div><h2>Navigation alone was not enough.</h2><p>The project began as an indoor campus-navigation idea. After faculty feedback, the scope expanded into a broader operations layer where room allocation, class schedules, faculty changes, student notifications and campus navigation can respond to one another.</p><div class="note"><strong>Core product question</strong><p>What should happen when a room, class or campus resource changes after the timetable has already been created?</p></div></section><section id="system"><div class="eyebrow">02 · SYSTEM</div><h2>One change should propagate through the campus.</h2><div class="flow"><div><span>FACULTY</span><b>Change room</b><p>Requests a new room for a scheduled class.</p></div><div class="arrow">→</div><div><span>SYSTEM</span><b>Validate + update</b><p>Checks availability and changes the class allocation.</p></div><div class="arrow">→</div><div><span>STUDENT</span><b>Receive update</b><p>Schedule and navigation reflect the change.</p></div></div><div class="info-grid"><article class="info-card"><h3>Student portal</h3><p>Schedules, notifications and navigation.</p></article><article class="info-card"><h3>Faculty portal</h3><p>Room availability and class-change workflows.</p></article><article class="info-card"><h3>HOD analytics</h3><p>Room usage and space-utilization analysis.</p></article><article class="info-card"><h3>Admin</h3><p>Users, buildings, floors, rooms and navigation data.</p></article></div></section><section id="role"><div class="eyebrow">03 · MY ROLE</div><h2>Product and system thinking came before implementation.</h2><p>As team leader, I focused heavily on product scope, cross-role workflows, navigation-data reasoning, testing strategy and the decisions needed to make the prototype coherent. I also implemented and debugged substantial backend and integration work with AI assistance. I do not present the entire team codebase as if I personally wrote every line.</p></section><section id="testing"><div class="eyebrow">04 · TESTING</div><h2>A larger dataset exposed the weakness behind a convincing interface.</h2><p>I moved toward a more structured synthetic campus dataset so expected room relationships, occupancy and routes could be checked rather than merely demonstrated. The route flow exposed that the spatial model still needs stronger architectural detail and clearer room / door / node relationships.</p><div class="info-grid"><article class="info-card"><h3>What improved</h3><p>The data model and visual representation are more structured than the original dummy-data version.</p></article><article class="info-card"><h3>What the test changed</h3><p>I stopped treating a visible route line as evidence that indoor navigation was good enough.</p></article></div></section><section id="limits"><div class="eyebrow">05 · VALIDATION BOUNDARY</div><h2>A prototype can prove the flow without proving real-world navigation accuracy.</h2><p>Controlled synthetic data can test whether system logic behaves as expected. Real positioning accuracy, architectural-grade mapping and deployment on an actual campus remain separate validation steps.</p><div class="note"><strong>Current description</strong><p>Working academic prototype — not a claim of production deployment.</p></div></section></div></div></div></main><footer class="page-footer"><span>© <span data-year></span> Himon Patel · SmartCampus</span><a href="index.html#projects">Back to projects</a></footer><script src="script.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="SmartCampus — Himon Patel's Engineering Project-II case study covering backend workflows, multi-role campus operations, testing and indoor-navigation limitations.">
+  <title>SmartCampus — Himon Patel</title>
+  <link rel="icon" href="assets/favicon.svg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="project-page smartcampus-page">
+  <div class="page-noise"></div>
+  <header class="project-header">
+    <a class="brand" href="index.html"><span class="brand-mark">SC</span><span>SmartCampus</span></a>
+    <nav><a href="#problem">Problem</a><a href="#system">System</a><a href="#implementation">Implementation</a><a href="#testing">Testing</a><a href="#source">Source</a><a href="index.html#projects">Portfolio</a></nav>
+    <div class="header-socials project-socials" data-social-mount aria-label="Social links"></div>
+  </header>
+
+  <main>
+    <section class="project-hero">
+      <div class="campus-hero-map" aria-hidden="true"><svg viewBox="0 0 1500 800" preserveAspectRatio="xMidYMid slice"><g opacity=".55"><path class="gridline" d="M0 120H1500M0 240H1500M0 360H1500M0 480H1500M0 600H1500M0 720H1500M180 0V800M360 0V800M540 0V800M720 0V800M900 0V800M1080 0V800M1260 0V800M1440 0V800"/></g><rect x="760" y="95" width="210" height="130" rx="18"/><rect x="1030" y="100" width="290" height="125" rx="18"/><rect x="820" y="320" width="270" height="145" rx="18"/><rect x="1160" y="325" width="240" height="140" rx="18"/><rect x="720" y="565" width="250" height="120" rx="18"/><rect x="1060" y="560" width="300" height="120" rx="18"/><path class="hero-route-base" d="M790 160H920V390H1240V620H1160"/><path class="hero-route-ray" d="M790 160H920V390H1240V620H1160"/><circle class="node" cx="790" cy="160" r="8"/><circle class="node" cx="920" cy="390" r="8"/><circle class="node" cx="1240" cy="390" r="8"/><circle class="node" cx="1240" cy="620" r="8"/></svg></div>
+      <div class="project-hero-inner reveal">
+        <div class="eyebrow">ENGINEERING PROJECT-II · TEAM PROJECT · 2026</div>
+        <h1>SmartCampus</h1>
+        <p class="lede">A multi-role campus operations prototype connecting faculty room changes, student schedules, notifications, room availability, analytics and indoor-navigation workflows.</p>
+        <div class="project-hero-actions">
+          <span class="project-status">WORKING ACADEMIC PROTOTYPE · TESTING / HARDENING</span>
+          <a class="button button-primary" data-config-link="smartcampusGithub" href="#" target="_blank" rel="noopener" hidden>View GitHub repository ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="case-wrap"><div class="case-grid">
+      <aside class="case-nav"><strong>SYSTEM MAP</strong><a href="#problem">01 Problem</a><a href="#system">02 System</a><a href="#implementation">03 Implementation</a><a href="#role">04 My role</a><a href="#testing">05 Testing</a><a href="#source">06 Source & setup</a><a href="#limits">07 Limits</a></aside>
+      <div class="case-content">
+        <section id="problem">
+          <div class="eyebrow">01 · PROBLEM</div>
+          <h2>Navigation alone was not enough.</h2>
+          <p>The project began as an indoor campus-navigation idea. After faculty feedback, the scope expanded into a broader operations layer where room allocation, class schedules, faculty changes, student notifications and navigation can respond to one another.</p>
+          <div class="note"><strong>Core system question</strong><p>What should happen when a room or class changes after the timetable has already been created?</p></div>
+        </section>
+
+        <section id="system">
+          <div class="eyebrow">02 · SYSTEM</div>
+          <h2>One operational change should propagate through the campus workflow.</h2>
+          <div class="flow"><div><span>FACULTY</span><b>Change room</b><p>Requests a new room for a scheduled class.</p></div><div class="arrow">→</div><div><span>SYSTEM</span><b>Validate + update</b><p>Updates the class allocation and affected records.</p></div><div class="arrow">→</div><div><span>STUDENT</span><b>Receive update</b><p>Schedule and navigation information reflect the change.</p></div></div>
+          <div class="info-grid"><article class="info-card"><h3>Student portal</h3><p>Schedules, notifications and navigation workflows.</p></article><article class="info-card"><h3>Faculty portal</h3><p>Room availability and class-change workflows.</p></article><article class="info-card"><h3>HOD analytics</h3><p>Room usage and space-utilization analysis.</p></article><article class="info-card"><h3>Admin</h3><p>Users, buildings, floors, rooms and navigation data.</p></article></div>
+        </section>
+
+        <section id="implementation">
+          <div class="eyebrow">03 · IMPLEMENTATION</div>
+          <h2>The portfolio now exposes the technical layer, not only the product idea.</h2>
+          <p>The current implementation uses Python and FastAPI for backend work with a web frontend built in HTML, CSS and JavaScript. The repository also includes Windows scripts for backend, frontend and combined setup/run flows.</p>
+          <div class="tech-strip" aria-label="SmartCampus technology stack"><span>Python</span><span>FastAPI</span><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Git / GitHub</span><span>Structured synthetic data</span></div>
+          <div class="architecture-panel">
+            <div class="architecture-row"><strong>Role interfaces</strong><span>Student · Faculty · HOD · Admin</span></div>
+            <div class="architecture-arrow">↓</div>
+            <div class="architecture-row accent"><strong>Application / backend workflows</strong><span>FastAPI · class changes · notifications · room state · navigation data</span></div>
+            <div class="architecture-arrow">↓</div>
+            <div class="architecture-row"><strong>Data layer</strong><span>Operational room / timetable data + structured synthetic spatial data</span></div>
+          </div>
+          <p class="case-caption">This is a simplified portfolio view of the system, not a claim that the prototype has production-scale architecture.</p>
+        </section>
+
+        <section id="role">
+          <div class="eyebrow">04 · MY ROLE</div>
+          <h2>My contribution spans product scope, system logic and implementation.</h2>
+          <p>As team leader, I focused on product scope, cross-role workflows, navigation-data reasoning, testing strategy and the decisions needed to make the prototype coherent. I also implemented and debugged substantial backend and integration work with AI assistance. I do not present the entire team codebase as if I personally wrote every line.</p>
+          <div class="info-grid"><article class="info-card"><h3>Product / system</h3><p>Scope, role interactions, workflow design and validation boundaries.</p></article><article class="info-card"><h3>Technical</h3><p>Backend and integration implementation, debugging and structured test-data work with AI assistance.</p></article></div>
+        </section>
+
+        <section id="testing">
+          <div class="eyebrow">05 · TESTING</div>
+          <h2>The useful test was not whether a route line appeared.</h2>
+          <p>I moved toward a more structured synthetic campus dataset so expected room relationships, occupancy and routes could be checked rather than merely demonstrated. The process exposed that the spatial model still needs stronger architectural detail and clearer room, door and path relationships before navigation quality can be meaningfully judged.</p>
+          <div class="info-grid"><article class="info-card"><h3>Workflow verified</h3><p>The faculty room-change flow can propagate through the system to affected student-facing information.</p></article><article class="info-card"><h3>What the test changed</h3><p>I stopped treating a visible route as evidence that the indoor-navigation model itself was accurate.</p></article><article class="info-card"><h3>Remaining application issues</h3><p>Student sign-up/login, contact-email connection and role-specific forgot-password flows remain areas to finish or harden.</p></article><article class="info-card"><h3>Navigation limitation</h3><p>Validation still depends on a more detailed spatial dataset representing geometry, doors, corridors, stairs and relationships between spaces.</p></article></div>
+        </section>
+
+        <section id="source">
+          <div class="eyebrow">06 · SOURCE & SETUP</div>
+          <h2>The project now has a public-code path, not only screenshots.</h2>
+          <p>The GitHub repository contains the code, README and Windows helper scripts for running the backend, frontend or the combined setup. The README should be treated as the source of truth for setup and project structure.</p>
+          <div class="source-actions"><a class="button button-primary" data-config-link="smartcampusGithub" href="#" target="_blank" rel="noopener" hidden>Open SmartCampus on GitHub ↗</a><a class="button button-ghost" href="index.html#projects">Back to selected work</a></div>
+          <div class="note"><strong>Repository link not visible?</strong><p>The portfolio intentionally hides this button until the public SmartCampus repository URL is added to <code>CONFIG.smartcampusGithub</code> in <code>script.js</code>.</p></div>
+        </section>
+
+        <section id="limits">
+          <div class="eyebrow">07 · VALIDATION BOUNDARY</div>
+          <h2>A working prototype can prove system flow without proving deployment readiness.</h2>
+          <p>Controlled synthetic data can test whether application logic behaves as expected. Real positioning accuracy, architectural-grade mapping, production authentication, reliability under load and deployment on an actual campus remain separate validation steps.</p>
+          <div class="note"><strong>Current description</strong><p>Working academic prototype — not a claim of production deployment or validated indoor-navigation accuracy.</p></div>
+        </section>
+      </div>
+    </div></div>
+  </main>
+  <footer class="page-footer"><span>© <span data-year></span> Himon Patel · SmartCampus</span><a href="index.html#projects">Back to projects</a></footer>
+  <script src="script.js"></script>
+</body>
+</html>

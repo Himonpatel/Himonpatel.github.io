@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="Himon Patel — engineering student working across product, systems, technology and research." />
+  <meta name="description" content="Himon Patel — Computer Engineering student working across product, systems, backend/web implementation and research." />
   <title>Himon Patel — Portfolio</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="styles.css" />
@@ -18,12 +18,12 @@
     </a>
     <nav class="main-nav" aria-label="Primary navigation">
       <a href="#projects">Projects</a>
-      <a href="#experience">Experience</a>
+      <a href="#interests">Interests</a>
       <a href="#activities">Activities</a>
       <a href="#process">Process</a>
       <a href="#about">About</a>
       <a href="about.html#credentials">Credentials</a>
-      <a href="assets/Himon_Patel_Resume.pdf" target="_blank" rel="noopener">Resume</a>
+      <a href="assets/Himon_Patel_Resume_Final.pdf" target="_blank" rel="noopener">Resume</a>
       <a href="#contact">Contact</a>
     </nav>
     <div class="header-socials" id="header-socials" aria-label="Social links"></div>
@@ -33,19 +33,19 @@
   <main id="top">
     <section class="hero section-shell" aria-labelledby="hero-title">
       <div class="hero-copy reveal">
-        <p class="eyebrow">Engineering · Product · Research</p>
-        <h1 id="hero-title">I build to understand <span class="hero-word" data-words='["systems.","products.","people.","problems."]'>systems.</span></h1>
-        <p class="hero-intro">I’m Himon Patel, an engineering student exploring how technology, product thinking and real-world systems fit together.</p>
+        <p class="eyebrow">Computer Engineering · Product · Systems · Technology</p>
+        <h1 id="hero-title">I build to understand <span class="hero-word" data-words='["systems.","products.","workflows.","problems."]'>systems.</span></h1>
+        <p class="hero-intro">I’m Himon Patel, a Computer Engineering student building technical prototypes while exploring product decisions, user workflows and the systems behind them.</p>
         <div class="hero-actions">
-          <a class="button button-primary" href="#projects">Explore selected projects</a>
-          <a class="button button-ghost" href="#about">About me</a>
+          <a class="button button-primary" href="#projects">Explore selected work</a>
+          <a class="button button-ghost" href="assets/Himon_Patel_Resume_Final.pdf" target="_blank" rel="noopener">View resume ↗</a>
         </div>
       </div>
 
       <div class="hero-stage reveal" aria-hidden="true">
         <div class="stage-orbit orbit-one"></div><div class="stage-orbit orbit-two"></div><div class="stage-grid"></div>
-        <div class="stage-core"><span class="stage-index">01</span><strong>BUILD</strong><small>research → question → prototype → learn</small></div>
-        <span class="stage-label label-a">PRODUCT</span><span class="stage-label label-b">SYSTEMS</span><span class="stage-label label-c">RESEARCH</span>
+        <div class="stage-core"><span class="stage-index">01</span><strong>BUILD</strong><small>question → implement → test → learn</small></div>
+        <span class="stage-label label-a">PRODUCT</span><span class="stage-label label-b">SYSTEMS</span><span class="stage-label label-c">TECH</span>
       </div>
       <a class="scroll-cue" href="#projects" aria-label="Scroll to selected projects"><span>Scroll</span><i></i></a>
     </section>
@@ -54,11 +54,11 @@
       <div class="about-grid home-about-grid">
         <div class="reveal">
           <p class="section-kicker">About</p>
-          <h2>I follow problems until they become evidence.</h2>
+          <h2>I try to connect the product question to the system underneath it.</h2>
         </div>
         <div class="about-copy reveal home-about-copy">
-          <p>I’m an engineering student in India working across product, systems, research and technology. Most of the work in this portfolio was created over the past year, after a small EdTech idea I submitted for a buildathon kept growing and eventually became Project Atlas.</p>
-          <p>I’ve also been trying to build teams around projects and hackathons since my third semester. That experience has made collaboration, shared understanding and technical independence recurring parts of how I approach ambitious work.</p>
+          <p>I’m an engineering student in India working across product, systems, research and technical implementation. My recent work ranges from a multi-role campus platform and an embedded ID prototype to long-term EdTech product architecture and independent company research.</p>
+          <p>I use projects to make assumptions visible: what the interface suggests, what the code actually proves, what the data can support, and what still needs real-world validation.</p>
 
           <div class="technical-foundation-home">
             <span class="technical-foundation-title">Technical foundation · current implementation experience</span>
@@ -67,14 +67,36 @@
               <div><strong>Go</strong><span>foundational</span></div>
               <div><strong>HTML / CSS / JavaScript</strong><span>active learning</span></div>
               <div><strong>FastAPI / backend work</strong><span>project experience</span></div>
-              <div><strong>ESP32 / RFID</strong><span>small IoT prototype experience</span></div>
-              <div><strong>Git / GitHub</strong><span>preparing first public project repository</span></div>
+              <div><strong>SQL</strong><span>academic fundamentals</span></div>
+              <div><strong>Git / GitHub</strong><span>public project repository</span></div>
+              <div><strong>ESP32 / RFID / fingerprint</strong><span>prototype experience</span></div>
             </div>
           </div>
           <div class="about-resume-action">
-            <a class="button button-ghost" href="assets/Himon_Patel_Resume.pdf" target="_blank" rel="noopener">View resume ↗</a>
+            <a class="button button-ghost" href="about.html">More about me ↗</a>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section id="interests" class="interests-home section-shell reveal" aria-labelledby="interests-title">
+      <div class="section-heading">
+        <div><p class="section-kicker">Current interests</p><h2 id="interests-title">Two directions I keep returning to.</h2></div>
+        <p class="section-note">One is a long-running product effort. The other is a newer area I am beginning to explore rather than claiming expertise in.</p>
+      </div>
+      <div class="interest-grid">
+        <article class="interest-card interest-atlas">
+          <span>LONG-TERM PRODUCT FOCUS</span>
+          <h3>Project Atlas · Education & learning systems</h3>
+          <p>How persistent student identity, learning progression, institutional participation and social learning might fit into one coherent system.</p>
+          <a href="atlas.html">Explore Atlas ↗</a>
+        </article>
+        <article class="interest-card interest-space">
+          <span>EMERGING RESEARCH INTEREST</span>
+          <h3>Space technology & systems</h3>
+          <p>I’m beginning to explore the space sector through its technologies, infrastructure, system constraints and engineering problems. This is an interest in development, not a claim of aerospace expertise.</p>
+          <small>Current stage: reading, mapping the field and identifying questions worth investigating.</small>
+        </article>
       </div>
     </section>
 
@@ -90,51 +112,87 @@
         <article class="credential-mini-card"><span>Course</span><strong>Harvard CS50P</strong><p>Python foundations and problem-solving practice.</p></article>
         <article class="credential-mini-card"><span>Course</span><strong>Learn Go</strong><p>Go language fundamentals and backend curiosity.</p></article>
         <article class="credential-mini-card"><span>Certificates</span><strong>Product Management learning</strong><p>Roadmap, strategy, technical PM and customer development.</p></article>
-        <article class="credential-mini-card"><span>Milestone</span><strong>GenAI Buildathon selection</strong><p>Placed in credentials rather than positioned as a major project.</p></article>
+        <article class="credential-mini-card"><span>Milestone</span><strong>GenAI Buildathon selection</strong><p>Participation evidence kept separate from project or work-experience claims.</p></article>
       </div>
     </section>
 
     <section class="manifesto section-shell reveal" aria-label="Portfolio introduction">
       <p class="section-kicker">What this portfolio is about</p>
-      <p class="manifesto-line">This is not a wall of technologies or a collection of tutorial projects. <strong>It is a portfolio of how I research, question assumptions and turn unclear ideas into something testable.</strong></p>
+      <p class="manifesto-line">This is not a wall of technologies or a collection of tutorial projects. <strong>It is evidence of how I frame problems, build enough to expose constraints, and separate a working prototype from an unvalidated claim.</strong></p>
     </section>
 
     <section id="projects" class="work section-shell">
       <div class="section-heading reveal">
-        <div><p class="section-kicker">Selected projects</p><h2>Different problems deserve different ways of being shown.</h2></div>
-        <p class="section-note">Hover a project to change the system view. Open one to enter its own case-study environment.</p>
+        <div><p class="section-kicker">Selected work</p><h2>Builds, product systems and research with evidence behind them.</h2></div>
+        <p class="section-note">These are the three deeper case studies I would want a recruiter to inspect first. Open one to enter its case-study environment.</p>
       </div>
 
       <div class="work-layout">
         <div class="project-list" id="project-list" aria-label="Selected projects"></div>
         <a class="project-preview reveal" id="project-preview" href="smartcampus.html" aria-live="polite">
-          <div class="preview-topline"><span id="preview-type">SYSTEM / BUILD</span><span id="preview-status">PROTOTYPE</span></div>
+          <div class="preview-topline"><span id="preview-type">SYSTEM / BUILD</span><span id="preview-status">WORKING PROTOTYPE</span></div>
           <div class="preview-visual" id="preview-visual"></div>
-          <div class="preview-copy"><p id="preview-meta">Engineering Project-II · Team project</p><h3 id="preview-title">SmartCampus</h3><p id="preview-description">A multi-role campus operations prototype that grew from an indoor-navigation problem.</p><span class="preview-open">Open case study ↗</span></div>
+          <div class="preview-copy"><p id="preview-meta">Engineering Project-II · Team project</p><h3 id="preview-title">SmartCampus</h3><p id="preview-description">A multi-role campus operations prototype connecting backend workflows, schedules, room changes, analytics and indoor-navigation logic.</p><span class="preview-open">Open case study ↗</span></div>
         </a>
       </div>
     </section>
 
-
-    <section id="experience" class="experience section-shell reveal" aria-labelledby="experience-title">
-      <div class="section-heading experience-heading">
-        <div><p class="section-kicker">Work experience</p><h2 id="experience-title">Industry roles and responsibilities.</h2></div>
-        <p class="section-note">This section is reserved for verified work experience. Academic and independent projects stay in Selected Projects.</p>
+    <section class="technical-work section-shell reveal" aria-labelledby="technical-work-title">
+      <div class="section-heading">
+        <div><p class="section-kicker">Other technical work</p><h2 id="technical-work-title">Smaller builds that show specific implementation skills.</h2></div>
+        <p class="section-note">These are deliberately smaller than the main case studies: useful evidence of Python logic, testing and hardware prototyping without pretending they are production systems.</p>
       </div>
-      <div class="experience-empty">
-        <span class="experience-marker">CURRENT</span>
-        <div>
-          <h3>Seeking a final-semester internship</h3>
-          <p>I’m currently building the portfolio and applying for internship opportunities. I’ll add verified work experience here when there is an actual role to list.</p>
-        </div>
+      <div class="technical-work-grid">
+        <article class="technical-work-card make10-card">
+          <div class="technical-work-visual make10-terminal" aria-hidden="true">
+            <span class="terminal-dot"></span><span class="terminal-dot"></span><span class="terminal-dot"></span>
+            <code>&gt; numbers: 8 2 1 5</code>
+            <code>&gt; make 10</code>
+            <code class="terminal-accent">hint solver · validation · pytest</code>
+          </div>
+          <div class="technical-work-copy">
+            <span>PYTHON · CS50P FINAL PROJECT</span>
+            <h3>Make 10</h3>
+            <p>A terminal arithmetic puzzle that generates four digits and validates expressions that must use them in order to reach exactly 10. Includes hint generation through brute-force search and unit tests with pytest.</p>
+            <div class="technical-work-tags"><b>Python</b><b>CLI</b><b>Input validation</b><b>Brute-force search</b><b>pytest</b></div>
+            <div class="technical-work-actions">
+              <a href="make10.html">View project ↗</a>
+              <a href="https://youtu.be/vppqqNDNDrQ" target="_blank" rel="noopener">Watch demo ↗</a>
+              <a href="#" data-config-link="make10Github" target="_blank" rel="noopener" hidden>GitHub ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="technical-work-card rfid-small-card">
+          <div class="technical-work-visual rfid-mini-visual" aria-hidden="true">
+            <span>ESP32</span><span>RC522</span><span>FINGERPRINT</span>
+          </div>
+          <div class="technical-work-copy">
+            <span>HARDWARE · PROTOTYPE</span>
+            <h3>RFID + Biometric Student ID</h3>
+            <p>An ESP32 prototype combining RFID identification, fingerprint verification and serial attendance logging.</p>
+            <div class="technical-work-tags"><b>ESP32</b><b>RFID</b><b>Fingerprint sensor</b><b>Embedded prototyping</b></div>
+            <div class="technical-work-actions"><a href="rfid.html">View project ↗</a></div>
+          </div>
+        </article>
       </div>
     </section>
 
+    <section class="secondary-work section-shell reveal" aria-labelledby="secondary-work-title">
+      <div class="section-heading">
+        <div><p class="section-kicker">Initiatives & explorations</p><h2 id="secondary-work-title">Useful work that is not presented as a finished product.</h2></div>
+        <p class="section-note">These stay secondary to the technical, product and research case studies above.</p>
+      </div>
+      <div class="secondary-work-grid">
+        <a class="secondary-work-card" href="gamejam.html"><span>INITIATIVE · ONGOING</span><h3>Gamified Learning / Game Jam</h3><p>Research, awareness material, faculty discussion and an external stakeholder introduction around deeper game-system learning.</p><b>View initiative ↗</b></a>
+        <a class="secondary-work-card" href="parallel-dimension.html"><span>CREATIVE EXPLORATION</span><h3>The Parallel Dimension</h3><p>A game-world and narrative concept exploring dimensional rules, discovery and uncertainty without presenting it as a finished game.</p><b>View exploration ↗</b></a>
+      </div>
+    </section>
 
     <section id="activities" class="activities section-shell reveal" aria-labelledby="activities-title">
       <div class="section-heading activities-heading">
         <div><p class="section-kicker">Activities & presentations</p><h2 id="activities-title">A public checkpoint in Atlas’s evolution.</h2></div>
-        <p class="section-note">I use this section for real activities outside coursework—not as a substitute for work experience.</p>
+        <p class="section-note">This section contains real activities outside coursework—not substitutes for work experience.</p>
       </div>
       <article class="activity-feature">
         <figure class="activity-image-wrap">
@@ -162,12 +220,12 @@
 
     <section id="contact" class="contact section-shell reveal">
       <p class="section-kicker">Contact</p><h2>Interested in the way I think or build?</h2>
-      <p>For professional conversations, project questions, or internship opportunities, reach me through LinkedIn or email.</p>
+      <p>I’m targeting a final-semester internship beginning January 2027. For professional conversations, project questions or internship opportunities, reach me through LinkedIn or email.</p>
       <div class="contact-links social-contact-links" id="contact-links"></div>
     </section>
   </main>
 
-  <footer class="site-footer section-shell"><span>© <span id="year"></span> Himon Patel</span><span>Designed as a product portfolio, not a template.</span></footer>
+  <footer class="site-footer section-shell"><span>© <span id="year"></span> Himon Patel</span><span>Product thinking · systems · technical execution</span></footer>
   <script src="script.js"></script>
 </body>
 </html>
